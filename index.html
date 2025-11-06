@@ -187,10 +187,11 @@
         const refreshBtn = document.getElementById('refreshBtn');
 
         // --- PASTE YOUR TMDB API KEY HERE ---
-        const omdbApiKey = "9832c9e838bd9c0e2cf7bb63db5673da";
+        const tmdbApiKey = "YOUR_TMDB_API_KEY_HERE";
         
         // TMDB Configuration
-        const omdbBaseUrl = "https://www.omdbapi.com/";
+        const tmdbBaseUrl = "https://api.themoviedb.org/3";
+        const tmdbImageBaseUrl = "https://image.tmdb.org/t/p/w500";
         
         // Platform names mapping
         const platformNames = {
@@ -207,7 +208,7 @@
         // Main function to get movie suggestion
         async function getMovieSuggestion() {
             // Check if API key is set
-            if (tmdbApiKey === "PASTE_YOUR_TMDB_API_KEY_HERE" || tmdbApiKey === "") {
+            if (tmdbApiKey === "YOUR_TMDB_API_KEY_HERE" || tmdbApiKey === "") {
                 errorMessage.textContent = "TMDB API Key is missing. Please paste your TMDB API key in the script (around line 182).";
                 errorMessage.classList.remove('hidden');
                 return;
